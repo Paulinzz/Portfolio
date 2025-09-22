@@ -63,7 +63,7 @@ const HeroSection: React.FC = () => {
             <StyledHero>
                 <Container maxWidth="lg">
                     <Grid container spacing={2}>
-                        <Grid xs={12} md={5}>
+                        <Grid item xs={12} md={5}>
                             <Box position="relative" pb={3}>
                                 <Box width={"500%"} position="absolute" top={-100} right={0}>
                                     <AnimatedBackground />
@@ -73,14 +73,14 @@ const HeroSection: React.FC = () => {
                                 </Box>
                             </Box>
                         </Grid>
-                        <Grid  xs={12} md={7}>
+                        <Grid item xs={12} md={7}>
                             <Typography color="primary.contrastText" variant="h1" pb={2} textAlign="center">
                                 João Paulo 
                             </Typography>
                             <Typewriter text="I'm a Developer Full Stack" delay={120} variant="h2" color="primary.contrastText" />
                             <Box mt={3}>
                                 <Grid container spacing={3} display="flex" justifyContent="center">
-                                    <Grid  xs={10} md={4}>
+                                    <Grid item xs={10} md={4}>
                                         <StyledButton onClick={() => handleDownload()}>
                                             <DownloadIcon />
                                             <Typography>
@@ -88,7 +88,7 @@ const HeroSection: React.FC = () => {
                                             </Typography>
                                         </StyledButton>
                                     </Grid>
-                                    <Grid  xs={10} md={4}>
+                                    <Grid item xs={10} md={4}>
                                         <StyledButton onClick={() => handleEmail()}>
                                             <EmailIcon />
                                             <Typography>

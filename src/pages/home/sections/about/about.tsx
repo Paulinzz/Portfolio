@@ -56,7 +56,7 @@ const AboutSection: React.FC = () => {
                         alignItems="stretch" // 🔑 estica os cards igualmente
                         pb={3}
                         >
-                        <Grid  xs={9} md={2.5}>
+                        <Grid item xs={9} md={2.5}>
                             <AnimationComponent moveDirection="right">
                             <StyledCard variant="outlined" sx={{minHeigh: 180, minWidth: 140, height: "100%"}}> 
                                 <WorkspacePremiumIcon />
@@ -66,7 +66,7 @@ const AboutSection: React.FC = () => {
                             </AnimationComponent>
                         </Grid>
                         
-                        <Grid  xs={9} md={2.5}>
+                        <Grid item xs={9} md={2.5}>
                             <AnimationComponent moveDirection="left">
                             <StyledCard variant="outlined" sx={{ minWidth: 376.66, height: "100%" }}> 
                                 <SchoolIcon />
@@ -92,7 +92,7 @@ const AboutSection: React.FC = () => {
                 <Box mb={5}>
                     <Grid container spacing={3} justifyContent="center" alignItems="stretch">
                     {skillsSet.map((skill, index) => (
-                        <Grid  key={index} xs={5} sm={4} md={2} lg={2}>
+                        <Grid item key={index} xs={5} sm={4} md={2} lg={2}>
                         < StyledCard variant="outlined" sx={{ height: "100%", minWidth: 120 }}>
                             <Box display="flex" flexDirection="column" alignItems="center">
                             <img 
