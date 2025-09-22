@@ -2,7 +2,7 @@ import { Box, Card, Container, Grid, Typography, styled } from "@mui/material"
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import SchoolIcon from '@mui/icons-material/School';
 import AnimationComponent from "../../../../components/AnimatonComponent/animationcomponent";
-
+// import Grid2 from '@mui/material/Unstable_Grid2';
 
 const AboutSection: React.FC = () => {
 
@@ -56,7 +56,7 @@ const AboutSection: React.FC = () => {
                         alignItems="stretch" // 🔑 estica os cards igualmente
                         pb={3}
                         >
-                        <Grid item xs={9} md={2.5}>
+                        <Grid item xs={9} md={2.5} component="div">''
                             <AnimationComponent moveDirection="right">
                             <StyledCard variant="outlined" sx={{minHeigh: 180, minWidth: 140, height: "100%"}}> 
                                 <WorkspacePremiumIcon />
