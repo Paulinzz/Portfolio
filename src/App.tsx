@@ -1,8 +1,8 @@
-import AboutSection from "src/pages/home/sections/About/about.tsx"
-import HeroSection from "src/pages/home/Section/Hero/hero.tsx"
-import Navbar from "src/components/NavBar/navbar.tsx"
-import ProjectsSection from "src/pages/home/sections/ProjectsSection/projectssection.tsx"
-import Footer from "src/components/Footer/footer.tsx"
+import AboutSection from 'src/pages/home/sections/About/about';
+import HeroSection from 'src/pages/home/sections/Hero/hero';
+import Navbar from 'src/components/NavBar/navbar';
+import ProjectsSection from 'src/pages/home/sections/ProjectsSection/projectssection';
+import Footer from 'src/components/Footer/footer';
 
 const App: React.FC = () => {
 
