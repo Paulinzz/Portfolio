@@ -1,13 +1,12 @@
-import { Typography, styled } from "@mui/material";
-import Grid2 from "@mui/material/Unstable_Grid2"; 
+import { Grid, Typography, styled } from "@mui/material";
 import StyledButton from "../StyledButton/styledbutton";
 
 export interface ProjectCardProps {
     title: string;
     subtitle: string;
     srcImg: string;
-    description: string;
-    technologies: string;
+    description: string
+    technologies: string
     websiteURL: string;
     codeURL: string;
 }
@@ -34,13 +33,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
     const StyledCard = styled("div")(({ theme }) => ({
         borderRadius: "3px",
-        border: `0.5px solid ${theme.palette.primary.contrastText}`,
+        border: `0.5px solid  ${theme.palette.primary.contrastText}`,
         backgroundColor: "transparent",
         color: theme.palette.primary.contrastText,
         padding: "20px",
         '&:hover': {
-            backgroundColor: theme.palette.primary.light,
-        },
+            backgroundColor: theme.palette.primary.light
+        }
     }));
 
     return (
@@ -48,7 +47,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             <Typography variant="h5">
                 {title}
             </Typography>
-            <Typography>
+            <Typography >
                 {subtitle}
             </Typography>
             <StyledImg src={srcImg} />
@@ -58,16 +57,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             <Typography fontWeight={600} pt={2}>
                 {technologies}
             </Typography>
-            <Grid2 container spacing={1} pt={2}>
-                <Grid2 xs={6}>
+            <Grid container spacing={1} pt={2}>
+                <Grid item xs={6} component="div">
                     <StyledButton onClick={() => window.open(websiteURL)}>View Project</StyledButton>
-                </Grid2>
-                <Grid2 xs={6}>
+                </Grid>
+                <Grid item xs={6} component="div"> 
                     <StyledButton onClick={() => window.open(codeURL)}>View Code</StyledButton>
-                </Grid2>
-            </Grid2>
+                </Grid>
+            </Grid>
         </StyledCard>
-    );
-};
+    )
+}
 
-export default ProjectCard;
+export default ProjectCard
