@@ -48,7 +48,7 @@ const ProjectsSection: React.FC = () => {
                 </Box>
                 <Grid container spacing={5} pb={3}>
                     {projects.map((project: ProjectCardProps, index: number) => (
-                        <Grid item md={6} key={index}>
+                        <Grid  md={6} key={index}>
                             <AnimationComponent moveDirection={index % 2 == 0 ? "right" : "left"}>
                                 <ProjectCard
                                     title={project.title}
