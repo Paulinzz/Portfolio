@@ -1,10 +1,10 @@
 import { Box, Container, Grid, Typography, styled } from "@mui/material"
-import { AnimatedBackground } from "/home/paulinzz/Documents/my-portfolio/src/componets/AnimatedBackground/AnimateBackground.tsx"
-import Typewriter from "/home/paulinzz/Documents/my-portfolio/src/componets/Typewriter/typewriter.tsx"
+import { AnimatedBackground } from "../../../../components/AnimatedBackground/AnimateBackground"
+import Typewriter from "../../../../components/Typewriter/typewriter"
 import Avatar from "../../../../assets/images/avatar.png"
 import DownloadIcon from '@mui/icons-material/Download';
 import EmailIcon from '@mui/icons-material/Email';
-import StyledButton from "/home/paulinzz/Documents/my-portfolio/src/componets/StyledButton/styledbutton.tsx"
+import StyledButton from "../../../../components/StyledButton/styledbutton"
 import CV from "/home/paulinzz/Documents/my-portfolio/src/assets/pdfs/Curriculum.pdf"
 
 const HeroSection: React.FC = () => {

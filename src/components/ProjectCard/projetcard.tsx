@@ -1,5 +1,5 @@
 import { Grid, Typography, styled } from "@mui/material";
-import StyledButton from "/home/paulinzz/Documents/my-portfolio/src/componets/StyledButton/styledbutton.tsx";
+import StyledButton from "../StyledButton/styledbutton";
 
 export interface ProjectCardProps {
     title: string;
