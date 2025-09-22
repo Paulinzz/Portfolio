@@ -1,10 +1,18 @@
-import Home from "./pages/home/home";
+import AboutSection from "/home/paulinzz/Documents/my-portfolio/src/pages/home/Section/About/about.tsx"
+import HeroSection from "/home/paulinzz/Documents/my-portfolio/src/pages/home/Section/Hero/hero.tsx"
+import Navbar from "/home/paulinzz/Documents/my-portfolio/src/componets/NavBar/navbar.tsx"
+import ProjectsSection from "/home/paulinzz/Documents/my-portfolio/src/pages/home/Section/ProjectsSection/projectssection.tsx"
+import Footer from "/home/paulinzz/Documents/my-portfolio/src/componets/Footer/footer.tsx"
 
-const App = () => {
+const App: React.FC = () => {
 
   return (
     <>
-      <Home/> 
+      <Navbar />
+      <HeroSection />
+      <AboutSection />
+      <ProjectsSection />
+      <Footer />
     </>
   )
 }
