@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
                     <AnimatedIconButton onClick={() => window.open("https://www.linkedin.com/in/paulofernandesalves/")}>
                         <LinkedInIcon />
                     </AnimatedIconButton>
-                    <AnimatedIconButton href="mailto:paulofernandesalves30@gmail.com" target="_blank">
+                    <AnimatedIconButton onClick={() => window.open("mailto:paulofernandesalves30@gmail.com", "_blank")}>
                         <EmailIcon />
                     </AnimatedIconButton>
                 </Box>

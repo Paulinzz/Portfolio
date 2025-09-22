@@ -56,7 +56,7 @@ const AboutSection: React.FC = () => {
                         alignItems="stretch" // 🔑 estica os cards igualmente
                         pb={3}
                         >
-                        <Grid item xs={9} md={2.5}>
+                        <Grid  xs={9} md={2.5}>
                             <AnimationComponent moveDirection="right">
                             <StyledCard variant="outlined" sx={{minHeigh: 180, minWidth: 140, height: "100%"}}> 
                                 <WorkspacePremiumIcon />
@@ -66,7 +66,7 @@ const AboutSection: React.FC = () => {
                             </AnimationComponent>
                         </Grid>
                         
-                        <Grid item xs={9} md={2.5}>
+                        <Grid  xs={9} md={2.5}>
                             <AnimationComponent moveDirection="left">
                             <StyledCard variant="outlined" sx={{ minWidth: 376.66, height: "100%" }}> 
                                 <SchoolIcon />
