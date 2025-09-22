@@ -92,7 +92,7 @@ const AboutSection: React.FC = () => {
                 <Box mb={5}>
                     <Grid container spacing={3} justifyContent="center" alignItems="stretch">
                     {skillsSet.map((skill, index) => (
-                        <Grid item key={index} xs={5} sm={4} md={2} lg={2}>
+                        <Grid  key={index} xs={5} sm={4} md={2} lg={2}>
                         < StyledCard variant="outlined" sx={{ height: "100%", minWidth: 120 }}>
                             <Box display="flex" flexDirection="column" alignItems="center">
                             <img 
