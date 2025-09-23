@@ -107,7 +107,7 @@ export default function Navbar() {
                 {/* Desktop */}
                 <StyledDesktopToolbar>
                     <Box sx={{ fontWeight: "bold", fontSize: "1.5rem" }}>
-                        <img src="src/assets/logo/logo.png" alt='logo' style={{height:"50px"}}/>
+                        <img src="/images/logo.png" alt='logo' style={{height:"50px"}}/>
                     </Box>
 
                     <Box display="flex" gap={3} mr={3}>
