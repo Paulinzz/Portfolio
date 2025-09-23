@@ -37,6 +37,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         backgroundColor: "transparent",
         color: theme.palette.primary.contrastText,
         padding: "20px",
+        minHeight: "840px",
         "&:hover": {
             backgroundColor: theme.palette.primary.light,
         },
@@ -52,7 +53,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 {technologies}
             </Typography>
 
-            {/* Grid container com itens */}
             <Grid container spacing={1} pt={2}>
                 <Grid item xs={6}>
                     <StyledButton onClick={() => window.open(websiteURL)}>
