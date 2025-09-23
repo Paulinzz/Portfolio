@@ -29,7 +29,7 @@ const HeroSection: React.FC = () => {
       display: "flex",
       alignItems: "center",
       paddingTop: "100px",
-      height: "80vh",
+      height: "100vh",
     },
   }));
 
