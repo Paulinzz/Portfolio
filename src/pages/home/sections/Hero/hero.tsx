@@ -56,19 +56,17 @@ const HeroSection: React.FC = () => {
     <StyledHero>
       <Container maxWidth="lg">
         <Grid container spacing={2}>
-          {/* Avatar */}
           <Grid item xs={12} md={5}>
-            <Box position="relative" pb={3}>
-              <Box width={"500%"} position="absolute" top={-100} right={0}>
-                <AnimatedBackground />
-              </Box>
-              <Box textAlign="center">
-                <StyledImg src="/images/avatar.png" alt="Avatar" />
-              </Box>
-            </Box>
+                <Box position="relative" pb={3} sx={{ }}>
+                <Box width="120%" position="absolute" top={-100} right={0}>
+                    <AnimatedBackground />
+                </Box>
+                <Box textAlign="center">
+                    <StyledImg src="/images/avatar.png" alt="Avatar" />
+                </Box>
+                </Box>
           </Grid>
 
-          {/* Texto e botões */}
           <Grid item xs={12} md={7}>
             <Typography
               color="primary.contrastText"
