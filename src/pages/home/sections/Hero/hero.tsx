@@ -1,5 +1,5 @@
 import { Box, Container, Typography, styled } from "@mui/material";
-import Grid2 from "@mui/material/Unstable_Grid2"; 
+import Grid from "@mui/material/Grid";
 import { AnimatedBackground } from "../../../../components/AnimatedBackground/AnimateBackground";
 import Typewriter from "../../../../components/Typewriter/typewriter";
 import Avatar from "../../../../assets/images/avatar.png";
@@ -57,8 +57,8 @@ const HeroSection: React.FC = () => {
     return (
         <StyledHero>
             <Container maxWidth="lg">
-                <Grid2 container spacing={2}>
-                    <Grid2 xs={12} md={5}>
+                <Grid container spacing={2}>
+                    <Grid item xs={12} md={5}>
                         <Box position="relative" pb={3}>
                             <Box width={"500%"} position="absolute" top={-100} right={0}>
                                 <AnimatedBackground />
@@ -67,9 +67,9 @@ const HeroSection: React.FC = () => {
                                 <StyledImg src={Avatar} />
                             </Box>
                         </Box>
-                    </Grid2>
+                    </Grid>
 
-                    <Grid2 xs={12} md={7}>
+                    <Grid item xs={12} md={7}>
                         <Typography
                             color="primary.contrastText"
                             variant="h1"
@@ -85,28 +85,28 @@ const HeroSection: React.FC = () => {
                             color="primary.contrastText"
                         />
                         <Box mt={3}>
-                            <Grid2
+                            <Grid
                                 container
                                 spacing={3}
                                 display="flex"
                                 justifyContent="center"
                             >
-                                <Grid2 xs={10} md={4}>
+                                <Grid item xs={10} md={4}>
                                     <StyledButton onClick={handleDownload}>
                                         <DownloadIcon />
                                         <Typography>Download CV</Typography>
                                     </StyledButton>
-                                </Grid2>
-                                <Grid2 xs={10} md={4}>
+                                </Grid>
+                                <Grid item xs={10} md={4}>
                                     <StyledButton onClick={handleEmail}>
                                         <EmailIcon />
                                         <Typography>Contact me</Typography>
                                     </StyledButton>
-                                </Grid2>
-                            </Grid2>
+                                </Grid>
+                            </Grid>
                         </Box>
-                    </Grid2>
-                </Grid2>
+                    </Grid>
+                </Grid>
             </Container>
         </StyledHero>
     );

@@ -1,5 +1,5 @@
 import { Typography, styled } from "@mui/material";
-import Grid2 from "@mui/material/Unstable_Grid2"; 
+import { Grid } from "@mui/material";
 import StyledButton from "../StyledButton/styledbutton";
 
 export interface ProjectCardProps {
@@ -58,14 +58,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             <Typography fontWeight={600} pt={2}>
                 {technologies}
             </Typography>
-            <Grid2 container spacing={1} pt={2}>
-                <Grid2 xs={6}>
+            <Grid container spacing={1} pt={2}>
+                <Grid xs={6}>
                     <StyledButton onClick={() => window.open(websiteURL)}>View Project</StyledButton>
-                </Grid2>
-                <Grid2 xs={6}>
+                </Grid>
+                <Grid xs={6}>
                     <StyledButton onClick={() => window.open(codeURL)}>View Code</StyledButton>
-                </Grid2>
-            </Grid2>
+                </Grid>
+            </Grid>
         </StyledCard>
     );
 };
