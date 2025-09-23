@@ -70,7 +70,7 @@ export default function Navbar() {
             <AppBar position="absolute">
                 <StyledMobileToolbar>
                     <Box sx={{ fontWeight: "bold", fontSize: "1.2rem" }}>
-                        <img src="/home/paulinzz/Documents/my-portfolio/src/assets/logo/logo.png" alt='logo' style={{height:"40px", paddingTop:"10px"}}/>
+                        <img src="/images/logo.png" alt='logo' style={{height:"40px", paddingTop:"10px"}}/>
                     </Box>
 
                     <IconButton
