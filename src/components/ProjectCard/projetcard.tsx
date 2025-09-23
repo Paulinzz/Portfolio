@@ -1,6 +1,6 @@
 import { Typography, styled } from "@mui/material";
-import { Grid } from "@mui/material";
 import StyledButton from "../StyledButton/styledbutton";
+import { Grid } from "@mui/material";
 
 export interface ProjectCardProps {
     title: string;
@@ -21,13 +21,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     websiteURL,
     codeURL
 }) => {
-
     const StyledImg = styled("img")(({ theme }) => ({
         width: "100%",
         objectFit: "contain",
         height: "80vw",
         padding: "10px 0",
-        [theme.breakpoints.up('md')]: {
+        [theme.breakpoints.up("md")]: {
             height: "45vh",
         },
     }));
@@ -38,32 +37,32 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         backgroundColor: "transparent",
         color: theme.palette.primary.contrastText,
         padding: "20px",
-        '&:hover': {
+        "&:hover": {
             backgroundColor: theme.palette.primary.light,
         },
     }));
 
     return (
         <StyledCard>
-            <Typography variant="h5">
-                {title}
-            </Typography>
-            <Typography>
-                {subtitle}
-            </Typography>
+            <Typography variant="h5">{title}</Typography>
+            <Typography>{subtitle}</Typography>
             <StyledImg src={srcImg} />
-            <Typography>
-                {description}
-            </Typography>
+            <Typography>{description}</Typography>
             <Typography fontWeight={600} pt={2}>
                 {technologies}
             </Typography>
+
+            {/* Grid container com itens */}
             <Grid container spacing={1} pt={2}>
-                <Grid xs={6}>
-                    <StyledButton onClick={() => window.open(websiteURL)}>View Project</StyledButton>
+                <Grid item xs={6}>
+                    <StyledButton onClick={() => window.open(websiteURL)}>
+                        View Project
+                    </StyledButton>
                 </Grid>
-                <Grid xs={6}>
-                    <StyledButton onClick={() => window.open(codeURL)}>View Code</StyledButton>
+                <Grid item xs={6}>
+                    <StyledButton onClick={() => window.open(codeURL)}>
+                        View Code
+                    </StyledButton>
                 </Grid>
             </Grid>
         </StyledCard>
