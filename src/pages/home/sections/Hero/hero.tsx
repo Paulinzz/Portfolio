@@ -6,7 +6,6 @@ import Avatar from "../../../../assets/images/avatar.png";
 import DownloadIcon from '@mui/icons-material/Download';
 import EmailIcon from '@mui/icons-material/Email';
 import StyledButton from "../../../../components/StyledButton/styledbutton";
-import CV from "src/assets/pdfs/Curriculum.pdf";
 
 const HeroSection: React.FC = () => {
     const StyledImg = styled("img")(({ theme }) => ({
@@ -35,14 +34,15 @@ const HeroSection: React.FC = () => {
         },
     }));
 
-    const handleDownload = () => {
-        const link = document.createElement("a");
-        link.href = CV;
-        link.download = "curriculo.pdf";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    };
+const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/pdfs/Curriculum.pdf";
+    link.download = "curriculo.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+
 
     const handleEmail = () => {
         const emailAddress = "paulofernandesalves30@gmail.com";
