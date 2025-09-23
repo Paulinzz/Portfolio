@@ -2,7 +2,7 @@ import { Box, Container, Typography, styled } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import { AnimatedBackground } from "../../../../components/AnimatedBackground/AnimateBackground";
 import Typewriter from "../../../../components/Typewriter/typewriter";
-import Avatar from "/home/paulinzz/Documents/my-portfolio/public/images/avatar.png";
+import Avatar from "public/images/avatar.png";
 import DownloadIcon from '@mui/icons-material/Download';
 import EmailIcon from '@mui/icons-material/Email';
 import StyledButton from "../../../../components/StyledButton/styledbutton";
