@@ -1,5 +1,5 @@
 import { Box, Card, Container, Typography, styled } from "@mui/material";
-import Grid from "@mui/material/Grid2"; 
+import Grid2 from "@mui/material/Unstable_Grid2";
 import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
 import SchoolIcon from "@mui/icons-material/School";
 import AnimationComponent from "../../../../components/AnimatonComponent/animationcomponent";
@@ -51,14 +51,14 @@ const AboutSection: React.FC = () => {
         </Box>
 
         {/* Experiência e Educação */}
-        <Grid
+        <Grid2
           container
           spacing={2}
           justifyContent="center"
           alignItems="stretch"
           pb={3}
         >
-          <Grid size={{ xs: 9, md: 3 }}>
+          <Grid2 size={{ xs: 9, md: 3 }}>
             <AnimationComponent moveDirection="right">
               <StyledCard variant="outlined" sx={{ minHeight: 180, height: "100%" }}>
                 <WorkspacePremiumIcon />
@@ -70,9 +70,9 @@ const AboutSection: React.FC = () => {
                 </Typography>
               </StyledCard>
             </AnimationComponent>
-          </Grid>
+          </Grid2>
 
-          <Grid size={{ xs: 9, md: 3 }}>
+          <Grid2 size={{ xs: 9, md: 3 }}>
             <AnimationComponent moveDirection="left">
               <StyledCard variant="outlined" sx={{ minHeight: 180, height: "100%" }}>
                 <SchoolIcon />
@@ -84,8 +84,8 @@ const AboutSection: React.FC = () => {
                 </Typography>
               </StyledCard>
             </AnimationComponent>
-          </Grid>
-        </Grid>
+          </Grid2>
+        </Grid2>
 
         {/* Descrição */}
         <Box pb={1}>
@@ -110,9 +110,9 @@ const AboutSection: React.FC = () => {
           </Typography>
         </Box>
         <Box mb={5}>
-          <Grid container spacing={3} justifyContent="center" alignItems="stretch">
+          <Grid2 container spacing={3} justifyContent="center" alignItems="stretch">
             {skillsSet.map((skill, index) => (
-              <Grid key={index} size={{ xs: 5, sm: 4, md: 2, lg: 2 }}>
+              <Grid2 key={index} size={{ xs: 5, sm: 4, md: 2, lg: 2 }}>
                 <StyledCard variant="outlined" sx={{ height: "100%", minWidth: 120 }}>
                   <Box display="flex" flexDirection="column" alignItems="center">
                     <img
@@ -123,9 +123,9 @@ const AboutSection: React.FC = () => {
                     <Typography variant="body1">{skill.name}</Typography>
                   </Box>
                 </StyledCard>
-              </Grid>
+              </Grid2>
             ))}
-          </Grid>
+          </Grid2>
         </Box>
       </Container>
     </>
