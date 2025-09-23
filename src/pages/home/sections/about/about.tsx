@@ -6,13 +6,11 @@ import AnimationComponent from "../../../../components/AnimatonComponent/animati
 const StyledCard = styled(Card)(({ theme }) => ({
   padding: "15px",
   textAlign: "center",
-  height: "100%",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
   transition: "all 0.3s ease",
   cursor: "pointer",
-  overflow: "hidden",
   "&:hover": {
     backgroundColor: theme.palette.secondary.light,
     transform: "scale(1.05)",
@@ -49,9 +47,9 @@ const AboutSection: React.FC = () => {
       </Box>
 
       <Grid container spacing={3} justifyContent="center" alignItems="stretch" pb={5}>
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid item xs={12} sm={6} md={3} sx={{ display: "flex" }}>
           <AnimationComponent moveDirection="right">
-            <StyledCard variant="outlined">
+            <StyledCard variant="outlined" sx={{ width: "100%" }}>
               <WorkspacePremiumIcon fontSize="large" sx={{ mb: 1 }} />
               <Typography fontWeight={600}>Experience</Typography>
               <Typography>
@@ -61,9 +59,9 @@ const AboutSection: React.FC = () => {
           </AnimationComponent>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={3}>
+        <Grid item xs={12} sm={6} md={3} sx={{ display: "flex" }}>
           <AnimationComponent moveDirection="left">
-            <StyledCard variant="outlined">
+            <StyledCard variant="outlined" sx={{ width: "100%" }}>
               <SchoolIcon fontSize="large" sx={{ mb: 1 }} />
               <Typography fontWeight={600}>Education</Typography>
               <Typography>
@@ -99,8 +97,8 @@ const AboutSection: React.FC = () => {
 
       <Grid container spacing={3} justifyContent="center" alignItems="stretch">
         {skillsSet.map((skill, index) => (
-          <Grid item xs={5} sm={4} md={2} lg={2} key={index}>
-            <StyledCard variant="outlined">
+          <Grid item xs={6} sm={4} md={2} lg={2} key={index} sx={{ display: "flex" }}>
+            <StyledCard variant="outlined" sx={{ width: "100%" }}>
               <Box display="flex" flexDirection="column" alignItems="center">
                 <img
                   src={skill.logo}
