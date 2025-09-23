@@ -1,27 +1,25 @@
-import { Box, Card, Container, Typography, styled } from "@mui/material";
-import { Grid } from "@mui/material";
+import { Box, Card, Container, Typography, styled, Grid } from "@mui/material";
 import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
 import SchoolIcon from "@mui/icons-material/School";
 import AnimationComponent from "../../../../components/AnimatonComponent/animationcomponent";
 
-const AboutSection: React.FC = () => {
-  const StyledCard = styled(Card)(({ theme }) => ({
-    padding: "10px 10px",
-    textAlign: "center",
-    marginBottom: "10px",
-    height: "100%",
-    width: "100%",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    transition: "all 0.3s ease",
-    cursor: "help",
-    "&:hover": {
-      backgroundColor: theme.palette.secondary.light,
-      transform: "scale(1.1)",
-    },
-  }));
+const StyledCard = styled(Card)(({ theme }) => ({
+  padding: "15px",
+  textAlign: "center",
+  height: "100%",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  transition: "all 0.3s ease",
+  cursor: "pointer",
+  overflow: "hidden",
+  "&:hover": {
+    backgroundColor: theme.palette.secondary.light,
+    transform: "scale(1.05)",
+  },
+}));
 
+const AboutSection: React.FC = () => {
   const skillsSet = [
     { name: "HTML", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain-wordmark.svg" },
     { name: "CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain.svg" },
@@ -42,92 +40,80 @@ const AboutSection: React.FC = () => {
   ];
 
   return (
-    <>
-      <Container maxWidth="lg">
-        <Box id="about" pt={5} mb={3}>
-          <Typography variant="h2" textAlign="center">
-            About me
-          </Typography>
-        </Box>
+    <Container maxWidth="lg">
+      {/* About Me */}
+      <Box id="about" pt={5} mb={3}>
+        <Typography variant="h2" textAlign="center">
+          About me
+        </Typography>
+      </Box>
 
-        <Grid
-          container
-          spacing={2}
-          justifyContent="center"
-          alignItems="stretch"
-          pb={3}
-        >
-          <Grid xs={9} md={3}>
-            <AnimationComponent moveDirection="right">
-              <StyledCard variant="outlined" sx={{ minHeight: 180, height: "100%" }}>
-                <WorkspacePremiumIcon />
-                <Typography textAlign="center" fontWeight={600}>
-                  Experience
-                </Typography>
-                <Typography textAlign="left">
-                  project participant and fellow as a tutor by IFRN
-                </Typography>
-              </StyledCard>
-            </AnimationComponent>
-          </Grid>
-
-          <Grid xs={9} md={3}>
-            <AnimationComponent moveDirection="left">
-              <StyledCard variant="outlined" sx={{ minHeight: 180, height: "100%" }}>
-                <SchoolIcon />
-                <Typography textAlign="center" fontWeight={600}>
-                  Education
-                </Typography>
-                <Typography textAlign="center">
-                  Internet IT technician - IFRN (2023–2026)
-                </Typography>
-              </StyledCard>
-            </AnimationComponent>
-          </Grid>
+      <Grid container spacing={3} justifyContent="center" alignItems="stretch" pb={5}>
+        <Grid item xs={12} sm={6} md={3}>
+          <AnimationComponent moveDirection="right">
+            <StyledCard variant="outlined">
+              <WorkspacePremiumIcon fontSize="large" sx={{ mb: 1 }} />
+              <Typography fontWeight={600}>Experience</Typography>
+              <Typography>
+                Project participant and fellow as a tutor at IFRN
+              </Typography>
+            </StyledCard>
+          </AnimationComponent>
         </Grid>
 
-        {/* Descrição */}
-        <Box pb={1}>
-          <Typography>
-            My name is João Paulo, and since I was a child, I have been curious
-            about technology, with a genuine curiosity to understand how systems
-            work and a desire to create and understand my own digital solutions.
-            Currently, in my course at IFRN Campus Caicó, I have acquired
-            knowledge in web development, system maintenance, and technological
-            problem solving. As a future Internet IT Technician, I am ready to
-            face new challenges and continue exploring the endless possibilities
-            that technology offers.
-          </Typography>
-        </Box>
+        <Grid item xs={12} sm={6} md={3}>
+          <AnimationComponent moveDirection="left">
+            <StyledCard variant="outlined">
+              <SchoolIcon fontSize="large" sx={{ mb: 1 }} />
+              <Typography fontWeight={600}>Education</Typography>
+              <Typography>
+                Internet IT Technician - IFRN (2023–2026)
+              </Typography>
+            </StyledCard>
+          </AnimationComponent>
+        </Grid>
+      </Grid>
 
-        <hr />
+      {/* Description */}
+      <Box pb={3}>
+        <Typography textAlign="justify">
+          My name is João Paulo, and since I was a child, I have been curious
+          about technology, with a genuine curiosity to understand how systems
+          work and a desire to create and understand my own digital solutions.
+          Currently, in my course at IFRN Campus Caicó, I have acquired
+          knowledge in web development, system maintenance, and technological
+          problem solving. As a future Internet IT Technician, I am ready to
+          face new challenges and continue exploring the endless possibilities
+          that technology offers.
+        </Typography>
+      </Box>
 
-        {/* Skills */}
-        <Box id="skills" pt={1} mb={3}>
-          <Typography variant="h3" textAlign="center" fontWeight={300}>
-            Skills
-          </Typography>
-        </Box>
-        <Box mb={5}>
-          <Grid container spacing={3} justifyContent="center" alignItems="stretch">
-            {skillsSet.map((skill, index) => (
-              <Grid key={index} xs={5} sm={4} md={2} lg={2}>
-                <StyledCard variant="outlined" sx={{ height: "100%", minWidth: 120 }}>
-                  <Box display="flex" flexDirection="column" alignItems="center">
-                    <img
-                      src={skill.logo}
-                      alt={skill.name}
-                      style={{ width: "40px", height: "40px", marginBottom: "8px" }}
-                    />
-                    <Typography variant="body1">{skill.name}</Typography>
-                  </Box>
-                </StyledCard>
-              </Grid>
-            ))}
+      <hr />
+
+      {/* Skills */}
+      <Box id="skills" pt={3} mb={3}>
+        <Typography variant="h3" textAlign="center" fontWeight={300}>
+          Skills
+        </Typography>
+      </Box>
+
+      <Grid container spacing={3} justifyContent="center" alignItems="stretch">
+        {skillsSet.map((skill, index) => (
+          <Grid item xs={5} sm={4} md={2} lg={2} key={index}>
+            <StyledCard variant="outlined">
+              <Box display="flex" flexDirection="column" alignItems="center">
+                <img
+                  src={skill.logo}
+                  alt={skill.name}
+                  style={{ width: 40, height: 40, marginBottom: 8 }}
+                />
+                <Typography>{skill.name}</Typography>
+              </Box>
+            </StyledCard>
           </Grid>
-        </Box>
-      </Container>
-    </>
+        ))}
+      </Grid>
+    </Container>
   );
 };
 
